@@ -13,6 +13,7 @@ fi
 [[ $- != *i* ]] && return
 
 # Set Editor
+EDITOR=vim
 VISUAL=$EDITOR
 CVSEDITOR=$EDITOR
 PKGEDITOR=$EDITOR
