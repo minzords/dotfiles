@@ -9,6 +9,7 @@ set ruler
 set mouse=a
 set t_Co=256
 set encoding=utf-8
+set fileencoding=utf-8
 
 syntax on
 filetype plugin indent on
