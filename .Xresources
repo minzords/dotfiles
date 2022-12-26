@@ -1,0 +1,14 @@
+xterm*faceName: Monospace
+xterm*faceSize: 15
+XTerm.termName: xterm-256color
+XTerm.vt100.locale: true
+
+XTerm*background: #1e1e1e
+XTerm*foreground: white
+
+xterm*rightScrollBar: true 
+xterm*ScrollBar: true
+xterm*Scrollbar*width: 10
+xterm*Scrollbar.thumb: None
+xterm*Scrollbar.foreground: #5a5a59
+xterm*Scrollbar.background: #2d2d2d
