@@ -1,0 +1,31 @@
+- 1.1.9
+- _NAME: Wireless Mouse M185 new
+  _absent: [hi-res-scroll, hires-smooth-invert, hires-smooth-resolution, hires-scroll-mode, scroll-ratchet, smart-shift, thumb-scroll-invert, thumb-scroll-mode,
+    onboard_profiles, report_rate, pointer_speed, dpi, speed-change, backlight, backlight-timed, fn-swap, persistent-remappable-keys, disable-keyboard-keys,
+    crown-smooth, divert-crown, divert-gkeys, m-key-leds, mr-key-led, multiplatform, change-host, gesture2-gestures, gesture2-divert, gesture2-params, sidetone,
+    equalizer, adc_power_management]
+  _battery: 0
+  _modelId: Wireless Mouse M185 new
+  _sensitive: {divert-keys: ignore, lowres-scroll-mode: false, reprogrammable-keys: false}
+  _serial: '00000000'
+  _unitId: '00000000'
+  _wpid: '4054'
+  divert-keys: {82: 0}
+  lowres-scroll-mode: false
+  reprogrammable-keys: {80: 80, 81: 81, 82: 82}
+- _NAME: Wireless Keyboard MK270
+  _sensitive: {hires-scroll-mode: ignore, hires-smooth-invert: ignore, hires-smooth-resolution: ignore}
+  _serial: '00000000'
+  _wpid: '4023'
+- _NAME: Wireless Mouse M185 new
+  _absent: [hi-res-scroll, hires-smooth-invert, hires-smooth-resolution, hires-scroll-mode, scroll-ratchet, smart-shift, thumb-scroll-invert, thumb-scroll-mode,
+    onboard_profiles, report_rate, dpi, speed-change, backlight, backlight-timed, fn-swap, persistent-remappable-keys, disable-keyboard-keys, crown-smooth,
+    divert-crown, divert-gkeys, m-key-leds, mr-key-led, multiplatform, change-host, gesture2-gestures, gesture2-divert, gesture2-params, sidetone, equalizer,
+    adc_power_management]
+  _battery: 0
+  _serial: '00000000'
+  _wpid: '4054'
+  divert-keys: {82: 0}
+  lowres-scroll-mode: false
+  pointer_speed: 256
+  reprogrammable-keys: {80: 80, 81: 81, 82: 82}
