@@ -9,6 +9,11 @@ elif [ "$(uname -s)" = "NetBSD" ]; then
 	is_netbsd=yes
 fi
 
+# Detect Workstation (Arch)
+if [ -f "/etc/arch-release" ]; then
+	is_workstation=yes;
+fi
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -18,6 +23,11 @@ VISUAL=$EDITOR
 CVSEDITOR=$EDITOR
 PKGEDITOR=$EDITOR
 PAGER=less
+
+if [ "${is_workstation}" ]; then
+	# Set PATH for using composer global bin package like laravel command
+	PATH=$(composer global config bin-dir --absolute --quiet):$PATH
+fi
 
 # Set Prompt
 PS1='[\u@\h \W]\$ '
