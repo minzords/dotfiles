@@ -26,7 +26,9 @@ PAGER=less
 
 if [ "${is_workstation}" ]; then
 	# Set PATH for using composer global bin package like laravel command
-	PATH=$(composer global config bin-dir --absolute --quiet):$PATH
+	SYMFONY=$HOME/.symfony5/bin
+	LARAVEL=$(composer global config bin-dir --absolute --quiet)
+	PATH=$LARAVEL:$SYMFONY:$PATH
 fi
 
 # Set Prompt
