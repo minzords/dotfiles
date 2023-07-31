@@ -28,7 +28,8 @@ if [ "${is_workstation}" ]; then
 	# Set PATH for using composer global bin package like laravel command
 	SYMFONY=$HOME/.symfony5/bin
 	LARAVEL=$(composer global config bin-dir --absolute --quiet)
-	PATH=$LARAVEL:$SYMFONY:$PATH
+	RUST=$HOME/.cargo/bin	
+	PATH=$LARAVEL:$SYMFONY:$RUST:$PATH
 fi
 
 # Set Prompt
