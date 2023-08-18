@@ -9,8 +9,9 @@ elif [ "$(uname -s)" = "NetBSD" ]; then
 	is_netbsd=yes
 fi
 
-# Detect Workstation (Arch)
-if [ -f "/etc/arch-release" ]; then
+# Detect Workstation
+distribution=$(cat /etc/os-release | grep -w NAME= | sed 's/NAME=//g; s/"//g')
+if [ "$distribution" == "Arch Linux" ] || [ "$distribution" == "Linux Mint" ]; then
 	is_workstation=yes;
 fi
 
