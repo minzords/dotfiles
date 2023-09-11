@@ -30,8 +30,9 @@ if [ "${is_workstation}" ]; then
 	SYMFONY=$HOME/.symfony5/bin
 	LARAVEL=$(composer global config bin-dir --absolute --quiet)
 	RUST=$HOME/.cargo/bin	
+	BUN=$HOME/.bun/bin
 	COMPOSER=./vendor/bin:./node_modules/.bin
-	PATH=$LARAVEL:$SYMFONY:$RUST:$COMPOSER:$PATH
+	PATH=$LARAVEL:$SYMFONY:$RUST:$BUN:$COMPOSER:$PATH
 fi
 
 # Set Prompt
