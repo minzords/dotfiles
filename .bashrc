@@ -9,9 +9,8 @@ elif [ "$(uname -s)" = "NetBSD" ]; then
 	is_netbsd=yes
 fi
 
-# Detect Workstation
-distribution=$(cat /etc/os-release | grep -w NAME= | sed 's/NAME=//g; s/"//g')
-if [ "$distribution" == "Arch Linux" ] || [ "$distribution" == "Linux Mint" ]; then
+# Detect Workstation (Arch)
+if [ -f "/etc/arch-release" ]; then
 	is_workstation=yes;
 fi
 
@@ -30,8 +29,9 @@ if [ "${is_workstation}" ]; then
 	SYMFONY=$HOME/.symfony5/bin
 	LARAVEL=$(composer global config bin-dir --absolute --quiet)
 	RUST=$HOME/.cargo/bin	
+	BUN=$HOME/.bun/bin
 	COMPOSER=./vendor/bin:./node_modules/.bin
-	PATH=$LARAVEL:$SYMFONY:$RUST:$COMPOSER:$PATH
+	PATH=$LARAVEL:$SYMFONY:$RUST:$BUN:$COMPOSER:$PATH
 fi
 
 # Set Prompt
@@ -49,3 +49,11 @@ fi
 if [ $XDG_CURRENT_DESKTOP == "GNOME" ]; then
 	QT_QPA_PLATFORMTHEME=gnome
 fi
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
