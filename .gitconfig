@@ -1,0 +1,8 @@
+[user]
+	name = minzords
+	email = florian.blanchet@itsm-ng.com
+	signingkey = 99F47F599739799A
+[commit]
+	gpgsign = true
+[alias]
+	permission-reset = !git diff -p -R --no-ext-diff --no-color --diff-filter=M | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
