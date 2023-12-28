@@ -25,6 +25,9 @@ CVSEDITOR=$EDITOR
 PKGEDITOR=$EDITOR
 PAGER=less
 
+# Fix GIT GPG
+export GPG_TTY=$(tty)
+
 if [ "${is_workstation}" ]; then
 	# Set PATH for using composer global bin package like laravel command
 	SYMFONY=$HOME/.symfony5/bin
