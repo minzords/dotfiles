@@ -2,6 +2,7 @@ call plug#begin()
 Plug 'godlygeek/tabular'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'github/copilot.vim'
 call plug#end()
 
 set ts=8
