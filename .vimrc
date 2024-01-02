@@ -11,6 +11,10 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'yaegassy/coc-intelephense', {'do': 'yarn install --frozen-lockfile'}
+Plug 'yaegassy/coc-blade', {'do': 'yarn install --frozen-lockfile'}
+Plug 'yaegassy/coc-laravel', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
 
 set nocompatible
@@ -26,7 +30,6 @@ set fileencoding=utf-8
 set laststatus=2
 set noshowmode
 set rtp+=~/.vim/plugged/fzf.vim
-
 syntax on
 filetype plugin indent on
 
@@ -40,6 +43,9 @@ noremap <C-right> :tabnext<CR>
 noremap <C-left> :tabprevious<CR>
 noremap <C-p> :tabnew<CR>:FZF<CR>
 
+inoremap <silent><expr> <c-@> coc#refresh()
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 let g:lightline = {
       \ 'colorscheme': 'wombat',
