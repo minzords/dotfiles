@@ -1,8 +1,18 @@
 [user]
 	name = minzords
 	email = florian.blanchet@itsm-ng.com
-	signingkey = 99F47F599739799A
+	signingkey = 2B7BF90C24A8C505FAF40FD499F47F599739799A
 [commit]
 	gpgsign = true
 [alias]
 	permission-reset = !git diff -p -R --no-ext-diff --no-color --diff-filter=M | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+[init]
+	defaultBranch = main
+[gpg]
+	program = gpg2
+[core]
+	editor = vim
+[pull]
+    rebase = true
+[push]
+	autoSetupRemote = true
